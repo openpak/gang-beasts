@@ -18,7 +18,7 @@ decompressed NSO images and Unity managed metadata). No live traffic yet.
 | Protocols NOT linked | Ranking, DataStore, Subscriber, Utility, Shop, Messaging |
 | Auth shape | NPLN-style: `JobBackEndServicesLogin`, `AcquireNsaIdToken` via `SigloAccountFacade` |
 | Server URL templates | `g%08x-%%.s.n.srv.nintendo.net`, `%s.%%.p.srv.nintendo.net` |
-| Port-base request | **22160** (auth 22160, secure 22161, healthz 22162; next free block after MK8D's 22150) |
+| Port-base request | **22210** (auth 22210, secure 22211, healthz 22212; 22160 was taken by super-mario-bros-35, 22200 requested by astroneer; verified against switch-nex `bin/title-ports.json` 2026-10-26) |
 | TODO-KEY | `NEX_SERVER_ID` value — field name only in metadata, needs Il2CppDumper |
 | TODO-KEY | `NEX_ACCESS_KEY` value — field name only in metadata, needs Il2CppDumper |
 | TODO-KEY | `CoatsinkServiceUrl` / `CoatsinkServiceFinalUrl` values — needs Il2CppDumper or asset dump |

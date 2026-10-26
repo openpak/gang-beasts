@@ -6,5 +6,5 @@
   plus logged 501 JSON stubs on `/coatsink/*` (Coatsink matchmaker/Multiplay)
   and `/costume/*` (costume DB) so captures reveal the exact contracts.
   Identity checks go to nx-baas. NEX 4.6.5 registration request delivered as
-  `docs/nex-spec.md` (port-base 22160; `NEX_SERVER_ID`/`NEX_ACCESS_KEY` and
+  `docs/nex-spec.md` (port-base 22210; `NEX_SERVER_ID`/`NEX_ACCESS_KEY` and
   `CoatsinkServiceUrl` values outstanding, need Il2CppDumper).

@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 # Gang Beasts' developer-side HTTP surface (Coatsink matchmaker/Multiplay and
-# costume DB stubs) for the Switch build. Plain HTTP on 23560 behind the TLS
-# terminator; health on 23561.
+# costume DB stubs) for the Switch build. Plain HTTP on 23590 behind the TLS
+# terminator; health on 23591.
 FROM --platform=$BUILDPLATFORM golang:1.26-alpine AS build
 ARG TARGETOS TARGETARCH
 WORKDIR /src
@@ -11,5 +11,5 @@ RUN CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH GOWORK=off go build -trimpat
 FROM gcr.io/distroless/static
 COPY --from=build /out/gang-beastsd /gang-beastsd
 USER nonroot:nonroot
-EXPOSE 23560 23561
+EXPOSE 23590 23591
 ENTRYPOINT ["/gang-beastsd"]

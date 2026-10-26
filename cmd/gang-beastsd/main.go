@@ -31,8 +31,8 @@ import (
 )
 
 var (
-	addr       = flag.String("addr", ":23560", "plain HTTP listen address (behind the TLS terminator)")
-	healthAddr = flag.String("health-addr", ":23561", "health listen address")
+	addr       = flag.String("addr", ":23590", "plain HTTP listen address (behind the TLS terminator)")
+	healthAddr = flag.String("health-addr", ":23591", "health listen address")
 )
 
 func main() {

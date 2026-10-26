@@ -2,9 +2,9 @@
 
 | Port | Use |
 | --- | --- |
-| 23560 | plain HTTP: `/coatsink/*` and `/costume/*` stubs (behind the TLS terminator) |
-| 23561 | `/healthz` |
-| 23562–23569 | reserved |
+| 23590 | plain HTTP: `/coatsink/*` and `/costume/*` stubs (behind the TLS terminator) |
+| 23591 | `/healthz` |
+| 23592–23599 | reserved |
 
-NEX sessions use the `switch-nex` registry ports (requested base 22160, see
+NEX sessions use the `switch-nex` registry ports (requested base 22210, see
 [nex-spec.md](nex-spec.md)); this service publishes none for them.
