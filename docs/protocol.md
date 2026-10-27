@@ -49,7 +49,18 @@ The Switch porter (Coatsink) ships managed matchmaker/multiplay namespaces:
 `Coatsink.Matchmaker.*` (Client/Server/Contracts/Data/Utils),
 `Coatsink.Matchmaking.Utils`, `Coatsink.Multiplay.Client(.Qos/.Xsts)`,
 `Coatsink.Multiplay.Server*`, with `CoatsinkServiceUrl` /
-`CoatsinkServiceFinalUrl` fields (values not recovered).
+`CoatsinkServiceFinalUrl` fields. Recovered 2026-10-27 from the
+`MatchmakingClientMonobehaviour` serialized fields (identical
+180-byte object in `romfs/Data/level1` pathID 745 @`0x19c48` and
+`romfs/Data/resources.assets` pathID 10536 @`0xe29188`):
+`CoatsinkServiceUrl=https://matchmaking-service-prod.meattelecom.com`,
+`FleetId=aa7c2580-5a72-11e7-9684-0242ac110009`,
+`UnityProjectId=39848f19-bb83-4915-8516-cb4afbfcb371`,
+`TitleName=Gangbeasts`. The exact FinalUrl template
+(`MatchmakingClient.BuildCoatsinkServiceFinalUrl`, metadata method
+51838 token `0x6000034`) and the live host choice (asset
+`matchmaking-service-prod` vs literal `prod-matchmaker`) still need
+a Harbor DNS/TLS capture.
 
 Hardcoded endpoints in managed metadata:
 
