@@ -1,7 +1,7 @@
 # Gang Beasts — the client's contract
 
 Read from the Switch executable (Gang Beasts `0100D58012E12000`, v0 base,
-Unity 2020.3.5f1 IL2CPP), see [provenance](provenance.md). Keep this file in
+Unity 2020.3.5f1 IL2CPP). Keep this file in
 step with `cmd/gang-beastsd`.
 
 Every fact below comes from the workspace recon at
@@ -94,3 +94,18 @@ answers `/costume/*` with a logged 501 and JSON
   (`Unity.Services` zero hits). "socket.io" hits are `nn::socket::Ioctl`;
   "dauth" hits are dormant Steam API names. USQP server-query strings are
   present but unscoped.
+
+## Sources
+
+Clean room: only the owner's own game client was examined, and no server code of the developer
+was seen or used. Where facts came from:
+
+- Title ID, v0 base, Unity 2020.3.5f1 IL2CPP, SDK 11.4.x: NSP/NCA headers and `romfs/Data` layout.
+- NEX 4.6 lib 4.6.5 (`S1140`, branch `NEX4.6`, pack `7923402a`), transports (PRUDP, PRUDPLite,
+  WebSocket, relay), server URL, nncs templates, NPLN-style login job names, protocol set
+  present/absent: string literals and NEX RTTI in the Switch main image.
+- UNET HLAPI lobby classes, `NET_*` message ids, `NEX_SERVER_ID`/`NEX_ACCESS_KEY` field names
+  (values unknown), Coatsink namespaces, `CoatsinkServiceUrl` fields and the hardcoded
+  UNET/Multiplay/cloud/costume-DB/coatsink URLs: Unity managed metadata (`global-metadata.dat`).
+- NPDM online services including `ldn:u`: `main.npdm.json`.
+- Absent middleware: zero or false-positive-only hits across native and managed strings.
