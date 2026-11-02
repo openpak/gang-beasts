@@ -32,7 +32,6 @@ go run ./cmd/gang-beastsd
 
 - [Protocol](docs/protocol.md)
 - [NEX registration request](docs/nex-spec.md)
-- [Evidence](docs/evidence.md)
 - [Ports](docs/ports.md)
 - [Provenance](docs/provenance.md)
 
