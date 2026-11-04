@@ -1,6 +1,6 @@
 # Changelog — gang-beasts
 
-## v0.1.0 — unreleased
+## v0.1.0 — 2026-11-04
 
 - `gang-beastsd`: skeleton for the Switch build (`0100D58012E12000`). `/healthz`
   plus logged 501 JSON stubs on `/coatsink/*` (Coatsink matchmaker/Multiplay)
